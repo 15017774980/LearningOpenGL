@@ -8,6 +8,7 @@ list(APPEND LibrariesAllSubDir "DepthTest")
 list(APPEND LibrariesAllSubDir "StencilTest")
 list(APPEND LibrariesAllSubDir "Blending")
 list(APPEND LibrariesAllSubDir "FaceCulling")
+list(APPEND LibrariesAllSubDir "Framebuffers")
 
 foreach(dirname ${LibrariesAllSubDir})
     add_subdirectory(${dirname})
