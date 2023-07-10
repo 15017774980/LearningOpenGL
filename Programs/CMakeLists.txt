@@ -10,6 +10,8 @@ list(APPEND LibrariesAllSubDir "Blending")
 list(APPEND LibrariesAllSubDir "FaceCulling")
 list(APPEND LibrariesAllSubDir "Framebuffers")
 list(APPEND LibrariesAllSubDir "CubeMaps")
+list(APPEND LibrariesAllSubDir "AdvancedGLSL")
+list(APPEND LibrariesAllSubDir "GeometryShader")
 
 foreach(dirname ${LibrariesAllSubDir})
     add_subdirectory(${dirname})

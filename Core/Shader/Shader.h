@@ -16,7 +16,7 @@ public:
 	unsigned int ID;
 
 	// 读取并构建着色器
-	Shader(const char* vertexPath, const char* fragmentPath);
+	Shader(const char* vertexPath, const char* fragmentPath, const char* geometryPath = nullptr);
 
 	//	激活着色器程序
 	void Active();
@@ -29,6 +29,10 @@ public:
 	void SetVec3(const std::string& name, float x, float y, float z) const;
 	void SetVec3(const std::string& name, const glm::vec3& pos);
 	void SetMat4(const std::string& name, const glm::mat4& mat4);
+
+private:
+	void _checkCompileErrors(GLuint shader, std::string type);
+
 };
 
 
