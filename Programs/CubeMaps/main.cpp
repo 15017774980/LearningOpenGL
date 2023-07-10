@@ -78,7 +78,7 @@ int main()
     // 开启深度测试
     glEnable(GL_DEPTH_TEST);
 
-    Shader shader("Assets/shader/reflex_shader.vs", "Assets/shader/reflect_shader.fs");
+    Shader shader("Assets/shader/skybox/4_6_shader.vs", "Assets/shader/skybox/4_6_shader.fs");
     Shader skyboxShader("Assets/shader/skybox_shader.vs", "Assets/shader/skybox_shader.fs");
 
     float cubeVertices[] = {
@@ -198,7 +198,7 @@ int main()
         glBindVertexArray(0);
     }
 
-    Model model("Assets/model/nanosuit/nanosuit.obj");
+    Model model("Assets/model/nanosuit_reflection/nanosuit.obj");
 
     vector<std::string> faces{
         "Assets/texture/skybox/right.jpg",
@@ -234,13 +234,13 @@ int main()
         shader.SetVec3("cameraPos", mainCamera.Position);
         shader.SetMat4("model", _model_matrix);
         // cube
-        glBindVertexArray(cubeVAO);
+        /*glBindVertexArray(cubeVAO);
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_CUBE_MAP, skybox.ID);
         glDrawArrays(GL_TRIANGLES, 0, 36);
-        glBindVertexArray(0);
+        glBindVertexArray(0);*/
         // model
-        //model.Draw(shader);
+        model.Draw(shader);
         // skybox
         glDepthFunc(GL_LEQUAL);
         glm::mat4 view = glm::mat4(glm::mat3(mainCamera.GetViewMatrix()));

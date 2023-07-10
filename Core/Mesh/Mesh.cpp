@@ -16,6 +16,7 @@ void Mesh::Draw(Shader shader)
 	unsigned int specularNr = 1;
 	unsigned int normalNr = 1;
 	unsigned int heightNr = 1;
+	unsigned int reflectionNr = 1;
 	for (unsigned int i = 0; i < textures.size(); i++)
 	{
 		glActiveTexture(GL_TEXTURE0 + i);
@@ -29,6 +30,8 @@ void Mesh::Draw(Shader shader)
 			number = std::to_string(normalNr++);
 		else if (name == "texture_height")
 			number = std::to_string(heightNr++);
+		else if (name == "texture_reflection")
+			number = std::to_string(reflectionNr++);
 
 		shader.SetInt((name + number).c_str(), i);
 		glBindTexture(GL_TEXTURE_2D, textures[i].id);

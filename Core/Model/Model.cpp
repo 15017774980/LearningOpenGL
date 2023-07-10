@@ -154,8 +154,11 @@ Mesh Model::processMesh(aiMesh* mesh, const aiScene* scene)
 		vector<mTexture> normalMaps = loadMaterialTextures(material, aiTextureType_HEIGHT, "texture_normal");
 		textures.insert(textures.end(), normalMaps.begin(), normalMaps.end());
 		// ∏ﬂ∂»Õº
-		vector<mTexture> heightMaps = loadMaterialTextures(material, aiTextureType_AMBIENT, "texture_height");
+		vector<mTexture> heightMaps = loadMaterialTextures(material, aiTextureType_HEIGHT, "texture_height");
 		textures.insert(textures.end(), heightMaps.begin(), heightMaps.end());
+		// ∑¥…‰Ã˘Õº
+		vector<mTexture> reflectionMaps = loadMaterialTextures(material, aiTextureType_AMBIENT, "texture_reflection");
+		textures.insert(textures.end(), reflectionMaps.begin(), reflectionMaps.end());
 	}
 
 	return Mesh(vertices, indices, textures);
