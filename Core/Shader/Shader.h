@@ -26,9 +26,10 @@ public:
 	void SetInt(const std::string& name, int value) const;
 	void SetFloat(const std::string& name, float value) const;
 	void SetFloat(const std::string& name, float x, float y, float z, float w = 1.0f) const;
+	void SetVec2(const std::string& name, const glm::vec2& val) const;
 	void SetVec3(const std::string& name, float x, float y, float z) const;
-	void SetVec3(const std::string& name, const glm::vec3& pos);
-	void SetMat4(const std::string& name, const glm::mat4& mat4);
+	void SetVec3(const std::string& name, const glm::vec3& pos) const;
+	void SetMat4(const std::string& name, const glm::mat4& mat4) const;
 
 private:
 	void _checkCompileErrors(GLuint shader, std::string type);

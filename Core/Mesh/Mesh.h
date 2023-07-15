@@ -32,17 +32,16 @@ public:
 	vector<Vertex> vertices;
 	vector<unsigned int> indices;
 	vector<mTexture> textures;
+	/// <summary>
+	/// 渲染数据
+	/// </summary>
+	unsigned int VAO, VBO, EBO;
 
 	/* 函数 */
 	Mesh(vector<Vertex> vertices, vector<unsigned int> indices, vector<mTexture> textures);
 	void Draw(Shader shader);
 
 private:
-	/// <summary>
-	/// 渲染数据
-	/// </summary>
-	unsigned int VAO, VBO, EBO;
-
 	/// <summary>
 	/// 初始化网格
 	/// </summary>

@@ -14,9 +14,10 @@ public:
 	Model( string const & path, bool gamma = false);
 	void Draw(Shader shader);
 
+	vector<Mesh> meshs;
+
 private:
 	// 模型数据
-	vector<Mesh> meshs;
 	string directory;
 	vector<mTexture> textures_loaded;
 	bool gammaCorrection;
