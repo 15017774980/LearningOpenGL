@@ -13,6 +13,7 @@ list(APPEND LibrariesAllSubDir "CubeMaps")
 list(APPEND LibrariesAllSubDir "AdvancedGLSL")
 list(APPEND LibrariesAllSubDir "GeometryShader")
 list(APPEND LibrariesAllSubDir "Instancing")
+list(APPEND LibrariesAllSubDir "AntiAliasing")
 
 foreach(dirname ${LibrariesAllSubDir})
     add_subdirectory(${dirname})

@@ -69,6 +69,7 @@ namespace Core
 			glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);	//	配置主版本号 3
 			glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);	//	配置此版本号 3
 			glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);	//	配置核心模式
+			//glfwWindowHint(GLFW_SAMPLES, 4);
 
 #ifdef __APPLE__
 			glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
